@@ -82,11 +82,15 @@
         @media (max-width: 768px) {
             .sp-br { display: block; }
             .main-container { padding: 35px 20px; margin: 20px 15px; border-radius: 30px; }
-            .page-title { font-size: 1.5rem; text-align: center; }
+            .page-title { font-size: 1.5rem; text-align: center; word-break: keep-all; }
             .header-labels { justify-content: center; }
             
             .maru-frame { padding: 20px 15px; }
             .reserve-section { padding: 25px 15px; }
+
+            /* スマホで料金表の文字が途中で折り返さないように対策 */
+            .price-table td { padding: 14px 12px; font-size: 0.9rem; white-space: nowrap; }
+            .price-table td:last-child { font-size: 1.1rem; }
         }
     </style>
 </head>
@@ -139,7 +143,7 @@
                 <p>授業スペースとペット（犬）スペースは分かれておりますが、安全のため<strong>犬アレルギーのあるお子さまのご利用は不可</strong>とさせていただきます。何卒ご了承ください。</p>
             </div>
             <p style="color: #666; margin-top: 10px;">
-                ※詳しい住所は、防犯の観点から【ご予約前日の17時】に個別でお送りいたします。
+                ※詳しい住所は、防犯の観点から<span style="display: inline-block;">【ご予約前日の17時頃】</span>に個別でお送りいたします。
             </p>
         </div>
 
@@ -173,19 +177,19 @@
             <table class="price-table">
                 <tr>
                     <td>初回（カウンセリング含む）</td>
-                    <td>1,500 円</td>
+                    <td>1,500円</td>
                 </tr>
                 <tr>
                     <td>2回目以降</td>
-                    <td>2,000 円</td>
+                    <td>2,000円</td>
                 </tr>
             </table>
         </div>
 
-        <!-- セクション7：予約エリア（公式LINEボタンを削除） -->
+        <!-- セクション7：予約エリア -->
         <div class="reserve-section">
             <div class="reserve-title">＼ 7月16日 0:00〜 スタート！ ／</div>
-            <p style="font-size: 0.95rem; font-weight: 500; margin-bottom: 0;">プレオープンのご予約は、<strong>公式LINEの「予約メニュー」</strong>から簡単に手続きが行えます。お気軽にご登録・ご連絡ください！</p>
+            <p style="font-size: 0.95rem; font-weight: 500; margin-bottom: 0;">プレオープンのご予約は、<strong>公式LINEの「予約メニュー」</strong>から簡単に手続きが行えます。</p>
         </div>
 
     </div>
