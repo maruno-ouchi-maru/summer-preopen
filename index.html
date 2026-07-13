@@ -66,7 +66,8 @@
 
         /* 予約セクション */
         .reserve-section { border: 3px dashed #D84B81; background: #FFF9F9; border-radius: 30px; padding: 30px 25px; text-align: center; margin-top: 40px; }
-        .reserve-title { font-size: 1.2rem; color: #D84B81; font-weight: bold; margin-bottom: 15px; }
+        /* タイトル全体が折り返さないように変更 */
+        .reserve-title { font-size: 1.2rem; color: #D84B81; font-weight: bold; margin-bottom: 15px; white-space: nowrap; }
 
         /* ボタン配置 */
         .action-buttons { display: flex; justify-content: center; margin-top: 20px; width: 100%; }
@@ -86,7 +87,10 @@
             .header-labels { justify-content: center; }
             
             .maru-frame { padding: 20px 15px; }
+            
+            /* スマホの超極小画面（幅が狭い古い機種など）で文字サイズを微調整して1行を維持 */
             .reserve-section { padding: 25px 15px; }
+            .reserve-title { font-size: 1.05rem; }
 
             /* スマホで料金表の文字が途中で折り返さないように対策 */
             .price-table td { padding: 14px 12px; font-size: 0.9rem; white-space: nowrap; }
